@@ -1,0 +1,115 @@
+{
+  "displayName": "Private Local Storage",
+  "defaultWidth": 160,
+  "defaultHeight": 24,
+  "components": "./index.js",
+  "icon": "./logo.png",
+  "props": [
+    {
+      "name": "mode",
+      "displayName": "Mode",
+      "type": "number",
+      "default": 1,
+      "control": {
+        "type": "menu",
+        "options": [
+          { "label": "Read Only", "value": 0 },
+          { "label": "Read/Write", "value": 1 }
+        ]
+      }
+    },
+    {
+      "name": "storageKey",
+      "displayName": "Storage Key",
+      "type": "text",
+      "default": "key"
+    },
+    {
+      "name": "storageValue",
+      "displayName": "Default Value",
+      "type": "text",
+      "default": "",
+      "enabled": {
+        "mode":  1
+      }
+    }, 
+    {
+      "name": "overwrite",
+      "displayName": "Overwrite existing key on load?",
+      "type": "boolean",
+      "default": false,
+      "enabled": {
+        "mode":  1
+      }
+    }, 
+    {
+      "name": "nonexistantKey",
+      "displayName": "Value to display if the key is not found",
+      "type": "text",
+      "default": "Non-existant key",
+      "enabled": {
+        "mode":  0
+      }
+    },
+    {
+      "name": "onRetrieved",
+      "displayName": "Fired when the storage value is read",
+      "type": "action",
+      "arguments": [
+        {
+          "type": "text",
+          "displayName": "Value retrieved from storage"
+        }
+      ],
+      "enabled": {
+        "mode":  0
+      }
+    }
+  ],
+    "childComponents": [
+    {
+      "name": "styles",
+      "displayName": "Styling",
+      "props": [
+        { "name": "enabled", "type": "boolean", "default": false },
+        {
+          "name": "color",
+          "displayName": "Color",
+          "type": "color",
+          "default": "@text"
+        },
+        {
+          "name": "backgroundColor",
+          "displayName": "Background Color",
+          "type": "color",
+          "default": "#FFFFFF"
+        },
+        {
+          "name": "border",
+          "displayName": "Border",
+          "type": "boolean",
+          "default": true
+        },
+        {
+          "name": "borderColor",
+          "displayName": "Border Color",
+          "type": "color",
+          "default": "#e0e0e0",
+          "enabled": {
+            "border": true
+          }
+        },
+        {
+          "name": "borderWidth",
+          "displayName": "Border Size",
+          "type": "number",
+          "default": 1,
+          "control": { "type": "slider", "max": 3, "min": 1 },
+          "enabled": {
+            "border": true
+          }
+        }
+      ]
+    }
+  ]
+}
