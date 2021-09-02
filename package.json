@@ -7,6 +7,7 @@
   "author": "Steven McKeown",
   "scripts": {
     "start": "tsc --watch & adalo dev",
+    "build": "tsc",
     "login": "adalo login",
     "publish": "adalo publish"
   },

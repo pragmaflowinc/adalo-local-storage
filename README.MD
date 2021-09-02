@@ -20,7 +20,8 @@ Prerequisites
 
 Clone the respository and run
 ``` bash
-$ yarn                #install dependencies
+$ yarn                # install dependencies
+$ yarn build          # build typescript project
 $ npx adalo login     # login to your adalo account
 $ npx adalo publish   # deploy the component privately to your account
 ```
