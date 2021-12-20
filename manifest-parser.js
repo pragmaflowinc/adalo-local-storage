@@ -43,11 +43,14 @@ function parseProp(prop) {
           builder.push(`${arg.displayName.split(' ').join('')}?: `)
           if (arg.type === 'text') {
             builder.push('string')
+            builder.push(', ')
           } else if (arg.type === 'number') {
             builder.push('number')
+            builder.push(', ')
           }
         })
       }
+      builder.pop() // remove last comma
       builder.push(`) => void`)
       ret.push(`  ${builder.join('')}`)
     }
