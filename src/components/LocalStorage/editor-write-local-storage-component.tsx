@@ -25,6 +25,7 @@ export function EditorWriteLocalStorageComponent({
   return (
     <View style={{...styles, alignSelf: 'stretch' }}>
     <TextInput 
+      style={styles} 
       value={storageValue}
     />
     </View>

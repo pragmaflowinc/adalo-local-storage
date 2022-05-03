@@ -27,7 +27,7 @@ export function ReadLocalStorageComponent({
   }, [storageKey])
   return (
     <View style={{...styles, alignSelf: 'stretch'}}>
-      <Text>{storedValue || 'asd'}</Text>
+      <Text style={styles}>{storedValue || 'asd'}</Text>
     </View>
   )
 }

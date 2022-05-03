@@ -64,7 +64,8 @@ export function WriteLocalStorageComponent({
 
   return (
     <View style={{...styles, alignSelf: 'stretch'}}>
-      <TextInput 
+      <TextInput
+        style={styles}
         value={inputValue}
         onChangeText={e => {
           const text = e
